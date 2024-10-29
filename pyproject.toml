@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "gpt-researcher"
-version = "0.8.5"
-description = "GPT Researcher is an autonomous agent designed for comprehensive online research on a variety of tasks."
-authors = ["Assaf Elovic <assaf.elovic@gmail.com>"]
+name = "assistant"
+version = "0.1"
+description = "GPT Assistant is an autonomous agent designed for comprehensive online research on a variety of tasks."
+authors = ["Mohammed <gaberm@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 
