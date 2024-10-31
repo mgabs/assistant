@@ -7,7 +7,7 @@ from typing import Dict, List, Any
 from fastapi.responses import JSONResponse
 from gpt_researcher.document.document import DocumentLoader
 # Add this import
-from backend.utils import write_md_to_pdf, write_md_to_word, write_text_to_md
+from backend.utils import write_md_to_word, write_text_to_md
 
 
 def sanitize_filename(filename: str) -> str:
@@ -40,10 +40,9 @@ async def handle_human_feedback(data: str):
 
 
 async def generate_report_files(report: str, filename: str) -> Dict[str, str]:
-    pdf_path = await write_md_to_pdf(report, filename)
     docx_path = await write_md_to_word(report, filename)
     md_path = await write_text_to_md(report, filename)
-    return {"pdf": pdf_path, "docx": docx_path, "md": md_path}
+    return {"docx": docx_path, "md": md_path}
 
 
 async def send_file_paths(websocket, file_paths: Dict[str, str]):
