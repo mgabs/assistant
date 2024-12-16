@@ -41,7 +41,7 @@ tiktoken = ">=0.7.0"
 json-repair = "^0.30.0"
 json5 = "^0.9.25"
 loguru = "^0.7.2"
-weasyprint = "^62.3"
+weasyprint = "^63.1"
 
 [build-system]
 requires = ["poetry-core"]
